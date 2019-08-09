@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.fragment.engineeringactivity.JobOrderProductionFragment;
+
 
 
 /**
@@ -23,8 +23,8 @@ public class JobOrderProductionActvity extends BaseActivity{
         FrameLayout container = (FrameLayout) findViewById(R.id.root_layout_joborderuncompounding);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        JobOrderProductionFragment jobOrderProductionFragment =  JobOrderProductionFragment.newInstance();
-        transaction.add(R.id.root_layout_joborderuncompounding, jobOrderProductionFragment);
+//        JobOrderProductionFragment jobOrderProductionFragment =  JobOrderProductionFragment.newInstance();
+//        transaction.add(R.id.root_layout_joborderuncompounding, jobOrderProductionFragment);
         transaction.commit();
     }
 

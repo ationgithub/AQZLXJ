@@ -170,7 +170,7 @@ public class WorkingTeamActivity extends BaseActivity{
 
     private void setToolbarTitle() {
         if (null != mToolbar && null != mDepartmentData && !TextUtils.isEmpty(mDepartmentData.departmentName)) {
-            StringBuffer sb = new StringBuffer(getString(R.string.engineering_department)+ " > ");
+            StringBuffer sb = new StringBuffer(getString(R.string.organization)+ " > ");
             sb.append("施工队");
             mToolbar.setTitle(sb.toString());
         }

@@ -228,7 +228,7 @@ public class OrganizationActivity extends BaseActivity {
                 }else {
                     mDepartmentData.departmentName = node.getName();
                     mDepartmentData.departmentID = node.getId();
-                    BaseApplication.bus.post(mDepartmentData);
+//                    BaseApplication.bus.post(mDepartmentData);
 
                     onBackPressed();
 

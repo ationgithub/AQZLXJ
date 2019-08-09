@@ -35,8 +35,6 @@ import com.shtoone.aqxj.utils.ConstantsUtils;
 import com.shtoone.aqxj.utils.DensityUtils;
 import com.shtoone.aqxj.utils.NetworkUtils;
 import com.shtoone.aqxj.utils.URL;
-import com.squareup.otto.Subscribe;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -67,7 +65,7 @@ public class ConcreteFragment extends BaseLazyFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        BaseApplication.bus.register(this);
+//        BaseApplication.bus.register(this);
         View view = inflater.inflate(R.layout.fragment_concrete, container, false);
         initView(view);
         return view;
@@ -267,34 +265,34 @@ public class ConcreteFragment extends BaseLazyFragment {
         startActivity(intent);
     }
 
-    @Subscribe
-    public void updateSearch(ParametersData mParametersData) {
-        if (mParametersData != null) {
-            if (mParametersData.fromTo == ConstantsUtils.CONCRETEFRAGMENT) {
-                fab.show();
-                this.mParametersData = mParametersData;
-                mPtrFrameLayout.autoRefresh(true);
-            }
-        }
-    }
+//    @Subscribe
+//    public void updateSearch(ParametersData mParametersData) {
+//        if (mParametersData != null) {
+//            if (mParametersData.fromTo == ConstantsUtils.CONCRETEFRAGMENT) {
+//                fab.show();
+//                this.mParametersData = mParametersData;
+//                mPtrFrameLayout.autoRefresh(true);
+//            }
+//        }
+//    }
 
-    @Subscribe
-    public void updateDepartment(DepartmentData mDepartmentData) {
-        if (null != mDepartmentData && null != mParametersData && null != this.mDepartmentData) {
-            if (mDepartmentData.fromto == ConstantsUtils.CONCRETEFRAGMENT) {
-                this.mParametersData.userGroupID = mDepartmentData.departmentID;
-                this.mDepartmentData.departmentID = mDepartmentData.departmentID;
-                this.mDepartmentData.departmentName = mDepartmentData.departmentName;
-                setToolbarTitle();
-                mPtrFrameLayout.autoRefresh(true);
-            }
-        }
-    }
+//    @Subscribe
+//    public void updateDepartment(DepartmentData mDepartmentData) {
+//        if (null != mDepartmentData && null != mParametersData && null != this.mDepartmentData) {
+//            if (mDepartmentData.fromto == ConstantsUtils.CONCRETEFRAGMENT) {
+//                this.mParametersData.userGroupID = mDepartmentData.departmentID;
+//                this.mDepartmentData.departmentID = mDepartmentData.departmentID;
+//                this.mDepartmentData.departmentName = mDepartmentData.departmentName;
+//                setToolbarTitle();
+//                mPtrFrameLayout.autoRefresh(true);
+//            }
+//        }
+//    }
 
     private void setToolbarTitle() {
         if (null != mToolbar && null != mDepartmentData && !TextUtils.isEmpty(mDepartmentData.departmentName)) {
             StringBuffer sb = new StringBuffer(mDepartmentData.departmentName + " > ");
-            sb.append(getString(R.string.concrete)).trimToSize();
+            sb.append(getString(R.string.organization)).trimToSize();
             mToolbar.setTitle(sb.toString());
         }
     }
@@ -309,6 +307,6 @@ public class ConcreteFragment extends BaseLazyFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApplication.bus.unregister(this);
+//        BaseApplication.bus.unregister(this);
     }
 }

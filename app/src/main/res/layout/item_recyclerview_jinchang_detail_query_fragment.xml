@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_item_recyclerview_jinchang_query_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="@dimen/card_Corner_Radius"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_title_produce_query_detail_activity"
+            style="@style/DetailTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进场数据详情" />
+
+
+        <TextView
+            android:id="@+id/textview0"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_produce_query_detail_activity"
+            android:text="进货编号：" />
+
+        <TextView
+            android:id="@+id/tv0_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview0"
+            android:layout_toRightOf="@+id/textview0" />
+
+        <TextView
+            android:id="@+id/textview1"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview0"
+            android:text="材料名称：" />
+
+        <TextView
+            android:id="@+id/tv1_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview1"
+            android:layout_toRightOf="@+id/textview1" />
+
+        <TextView
+            android:id="@+id/textview2"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview1"
+            android:text="供应商：" />
+
+        <TextView
+            android:id="@+id/tv2_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview2"
+            android:layout_toRightOf="@+id/textview2" />
+
+        <TextView
+            android:id="@+id/textview3"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview2"
+            android:text="进厂时间：" />
+
+        <TextView
+            android:id="@+id/tv3_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview3"
+            android:layout_toRightOf="@+id/textview3" />
+
+        <TextView
+            android:id="@+id/textview4"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview3"
+            android:text="出厂时间：" />
+
+        <TextView
+            android:id="@+id/tv4_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview4"
+            android:layout_toRightOf="@+id/textview4" />
+
+        <TextView
+            android:id="@+id/textview5"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview4"
+            android:text="车牌号：" />
+
+        <TextView
+            android:id="@+id/tv5_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview5"
+            android:layout_toRightOf="@+id/textview5" />
+
+        <TextView
+            android:id="@+id/tv_pici"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview5"
+            android:text="批次：" />
+
+        <TextView
+            android:id="@+id/tv_pici_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_pici"
+            android:layout_toRightOf="@+id/tv_pici" />
+
+
+
+        <TextView
+            android:id="@+id/textview6"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pici"
+            android:text="毛重(吨)：" />
+
+        <TextView
+            android:id="@+id/tv6_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview6"
+            android:layout_toRightOf="@+id/textview6" />
+
+        <TextView
+            android:id="@+id/textview7"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv7_jinchang_query_detail_activity"
+            android:layout_alignBottom="@id/textview6"
+            android:text="皮重(吨)：" />
+
+        <TextView
+            android:id="@+id/tv7_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview6"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/textview8"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview7"
+            android:text="净重(吨)：" />
+
+        <TextView
+            android:id="@+id/tv8_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview8"
+            android:layout_toRightOf="@+id/textview8" />
+
+        <TextView
+            android:id="@+id/textview9"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv9_jinchang_query_detail_activity"
+            android:layout_alignBottom="@+id/textview8"
+            android:text="扣重(吨)：" />
+
+        <TextView
+            android:id="@+id/tv9_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview8"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/textview10"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview9"
+            android:text="扣率(%)：" />
+
+        <TextView
+            android:id="@+id/tv10_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview10"
+            android:layout_toRightOf="@+id/textview10" />
+
+        <TextView
+            android:id="@+id/textview11"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv11_jinchang_query_detail_activity"
+            android:layout_alignBottom="@id/textview10"
+            android:text="称重偏差：" />
+
+        <TextView
+            android:id="@+id/tv11_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview10"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/textview12"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview11"
+            android:text="司磅员：" />
+
+        <TextView
+            android:id="@+id/tv12_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview12"
+            android:layout_toRightOf="@+id/textview12" />
+
+
+        <TextView
+            android:id="@+id/textview13"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv13_jinchang_query_detail_activity"
+            android:layout_alignBottom="@+id/textview12"
+            android:text="备注：" />
+
+        <TextView
+            android:id="@+id/tv13_jinchang_query_detail_activity"
+            style="@style/YalijiDetailTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview12"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

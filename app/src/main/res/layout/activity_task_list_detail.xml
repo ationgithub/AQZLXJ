@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_grey_50"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <in.srain.cube.views.ptr.PtrFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/ptr_task_list_detail_activity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/lightest_gray"
+                                                cube_ptr:ptr_duration_to_close="200"
+                                                cube_ptr:ptr_duration_to_close_header="1000"
+                                                cube_ptr:ptr_keep_header_when_refresh="true"
+                                                cube_ptr:ptr_pull_to_fresh="false"
+                                                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                                                cube_ptr:ptr_resistance="1.7">
+
+            <com.shtoone.aqxj.ui.PageStateLayout
+                android:id="@+id/psl_task_list_detail_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyView="@layout/page_state_empty_view"
+                app:errorView="@layout/page_state_error_view"
+                app:loadingView="@layout/page_state_loading_view"
+                app:netErrorView="@layout/page_state_net_error_view">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nsv_task_list_detail_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="基础信息"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="0.5dp">
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="所属机构："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_depart_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="计划方量："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_jhfl_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="开盘日期："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_time_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="任务编号："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_renwuno_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="浇筑部位："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_jzbw_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="设计强度："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_sjqd_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                    <TextView
+                                        style="@style/peibitongzhidanDetail"
+                                        android:layout_weight="1.5"
+                                        android:gravity="left|center_vertical"
+                                        android:paddingRight="5dp"
+                                        android:text="工程名称："/>
+
+                                    <TextView
+                                        android:id="@+id/tv_gcmc_task_list_detail"
+                                        style="@style/peibitongzhidanDetail"
+                                        android:layout_weight="2.5"
+                                        android:gravity="left|center_vertical"
+                                        android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="浇筑方式："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_jzfs_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="执行情况"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="0.5dp">
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="计划方量："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_fangliang_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="已完成方量："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_wancheng_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="盘数量："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_pan_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+
+
+                                    <TableRow>
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="执行进度："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_zxjd_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="节超："/>
+
+                                        <TextView
+                                            android:id="@+id/tv_jiechao_task_list_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp"/>
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="转移记录"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rv_report_task_list_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="20dp"/>
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="修改记录"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="3dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:paddingLeft="20dp"
+                                            android:text="任务单编号"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7"
+                                            android:paddingLeft="16dp"
+                                            android:text="操作人"/>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.5"
+                                            android:gravity="center_horizontal"
+                                            android:text="操作时间"/>
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.5"
+                                            android:gravity="center_horizontal"
+                                            android:text="操作方式"/>
+
+                                    </LinearLayout>
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_task_list_fragment"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="20dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </com.shtoone.aqxj.ui.PageStateLayout>
+        </in.srain.cube.views.ptr.PtrFrameLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

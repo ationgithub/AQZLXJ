@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/cv_item_recyclerview_taizhang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    app:cardCornerRadius="@dimen/card_Corner_Radius"
+                                    app:cardElevation="3dp"
+                                    app:cardPreventCornerOverlap="false"
+                                    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="材料名称：" />
+        <TextView
+            android:id="@+id/tv1_item_recyclerview_quyang1"
+            style="@style/RecyclerViewItemTextTheme"
+            android:textColor="@color/cpb_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv1"
+            android:layout_toRightOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv61"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:text="取样时间：" />
+        <TextView
+            android:id="@+id/tv6_item_recyclerview_taizhang"
+            style="@style/RecyclerViewItemTextTheme"
+            android:textColor="@color/cpb_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv61"
+            android:layout_toRightOf="@+id/tv61" />
+
+        <TextView
+            android:id="@+id/tv71"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv61"
+            android:text="台账编号：" />
+
+        <TextView
+            android:id="@+id/tv7_item_recyclerview_taizhang"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv71"
+            android:layout_toRightOf="@+id/tv71" />
+
+        <TextView
+        android:id="@+id/tv4"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv71"
+        android:text="进场时间：" />
+        <TextView
+        android:id="@+id/tv4_item_recyclerview_quyang1"
+        style="@style/RecyclerViewItemTextTheme"
+        android:textColor="@color/cpb_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv4"
+        android:layout_toRightOf="@+id/tv4" />
+
+        <TextView
+        android:id="@+id/tv5"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv4"
+        android:text="批次号：" />
+        <TextView
+        android:id="@+id/tv5_item_recyclerview_quyang1"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv5"
+        android:layout_toRightOf="@+id/tv5" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

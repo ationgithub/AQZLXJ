@@ -22,14 +22,12 @@ import com.shtoone.aqxj.adapter.SJPeiHebiListAdapter;
 import com.shtoone.aqxj.bean.DepartmentData;
 import com.shtoone.aqxj.bean.ParametersData;
 import com.shtoone.aqxj.bean.SJPeiHebiData;
-import com.shtoone.aqxj.fragment.laboratoryactivity.LilunPeihebiDetailActivity;
 import com.shtoone.aqxj.ui.PageStateLayout;
 import com.shtoone.aqxj.utils.AnimationUtils;
 import com.shtoone.aqxj.utils.ConstantsUtils;
 import com.shtoone.aqxj.utils.NetworkUtils;
 import com.shtoone.aqxj.utils.URL;
 import com.socks.library.KLog;
-import com.squareup.otto.Subscribe;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -69,7 +67,7 @@ public class SJPeiHebiActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!isRegistered) {
-            BaseApplication.bus.register(this);
+//            BaseApplication.bus.register(this);
             isRegistered = true;
         }
         setContentView(R.layout.fragment_peiliao_tongzhidan);
@@ -174,25 +172,25 @@ public class SJPeiHebiActivity extends BaseActivity {
     }
 
     private void jump2DetailActivity(int position) {
-        Intent intent = new Intent(this, LilunPeihebiDetailActivity.class);
+//        Intent intent = new Intent(this, LilunPeihebiDetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("PeiliaoTongzhidanDetail", listData.get(position));
-        intent.putExtras(bundle);
-        startActivity(intent);
+//        bundle.putSerializable("PeiliaoTongzhidanDetail", listData.get(position));
+//        intent.putExtras(bundle);
+//        startActivity(intent);
 
     }
 
-    @Subscribe
-    public void updateDepartment(DepartmentData mDepartmentData) {
-        if (null != mDepartmentData && null != mParametersData ) {
-            if (mDepartmentData.fromto == ConstantsUtils.SHEJIPEIHEBI) {
-                this.mParametersData.userGroupID = mDepartmentData.departmentID;
-                this.mDepartmentData.departmentName = mDepartmentData.departmentName;
-                setToolbarTitle();
-                mPtrFrameLayout.autoRefresh(true);
-            }
-        }
-    }
+//    @Subscribe
+//    public void updateDepartment(DepartmentData mDepartmentData) {
+//        if (null != mDepartmentData && null != mParametersData ) {
+//            if (mDepartmentData.fromto == ConstantsUtils.SHEJIPEIHEBI) {
+//                this.mParametersData.userGroupID = mDepartmentData.departmentID;
+//                this.mDepartmentData.departmentName = mDepartmentData.departmentName;
+//                setToolbarTitle();
+//                mPtrFrameLayout.autoRefresh(true);
+//            }
+//        }
+//    }
     private void initView() {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar_toolbar);
@@ -416,26 +414,26 @@ public class SJPeiHebiActivity extends BaseActivity {
         mParametersData.currentPage = (Integer.parseInt(mParametersData.currentPage) - 1) + "";
         mAdapter.notifyItemRemoved(mAdapter.getItemCount());
     }
-
-    @Subscribe
-    public void updateSearch(ParametersData mParametersData) {
-        if (mParametersData != null) {
-            if (mParametersData.fromTo == ConstantsUtils.SHEJIPEIHEBI) {
-                this.mParametersData.startDateTime = mParametersData.startDateTime;
-                this.mParametersData.endDateTime = mParametersData.endDateTime;
-                this.mParametersData.sjzt = mParametersData.sjzt;
-                this.mParametersData.llsjqd = mParametersData.llsjqd;
-                KLog.e("mParametersData:" + mParametersData.startDateTime);
-                KLog.e("mParametersData:" + mParametersData.endDateTime);
-                mPtrFrameLayout.autoRefresh(true);
-            }
-        }
-    }
+//
+//    @Subscribe
+//    public void updateSearch(ParametersData mParametersData) {
+//        if (mParametersData != null) {
+//            if (mParametersData.fromTo == ConstantsUtils.SHEJIPEIHEBI) {
+//                this.mParametersData.startDateTime = mParametersData.startDateTime;
+//                this.mParametersData.endDateTime = mParametersData.endDateTime;
+//                this.mParametersData.sjzt = mParametersData.sjzt;
+//                this.mParametersData.llsjqd = mParametersData.llsjqd;
+//                KLog.e("mParametersData:" + mParametersData.startDateTime);
+//                KLog.e("mParametersData:" + mParametersData.endDateTime);
+//                mPtrFrameLayout.autoRefresh(true);
+//            }
+//        }
+//    }
 
     private void setToolbarTitle() {
         if (null != mToolbar && null != BaseApplication.mDepartmentData && !TextUtils.isEmpty(BaseApplication.mDepartmentData.departmentName)) {
             StringBuffer sb = new StringBuffer(mDepartmentData.departmentName + " > ");
-            sb.append(getString(R.string.laboratory) + " > ");
+            sb.append(getString(R.string.organization) + " > ");
             sb.append("理论配合比").trimToSize();
             mToolbar.setTitle(sb.toString());
         }

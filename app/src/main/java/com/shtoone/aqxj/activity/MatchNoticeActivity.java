@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.fragment.laboratoryactivity.PeiliaoTongzhidanFragment;
+
 
 /**
  * Created by liangfeng on 2017/9/30.
@@ -22,8 +22,8 @@ public class MatchNoticeActivity extends BaseActivity {
         FrameLayout container = (FrameLayout) findViewById(R.id.root_layout_match_notice);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        PeiliaoTongzhidanFragment peiliaoTongzhidanFragment = PeiliaoTongzhidanFragment.newInstance();
-        transaction.add(R.id.root_layout_match_notice, peiliaoTongzhidanFragment);
+//        PeiliaoTongzhidanFragment peiliaoTongzhidanFragment = PeiliaoTongzhidanFragment.newInstance();
+//        transaction.add(R.id.root_layout_match_notice, peiliaoTongzhidanFragment);
         transaction.commit();
     }
 

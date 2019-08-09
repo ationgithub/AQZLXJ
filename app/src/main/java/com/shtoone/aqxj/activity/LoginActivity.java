@@ -128,6 +128,7 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void run() {
                         mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
+
                     }
                 }, 300);
             }
@@ -150,6 +151,7 @@ public class LoginActivity extends BaseActivity {
                         login_button.setProgress(50);
                         //联网校对密码正确后保存
                         //没有加url健壮性判断……………………………
+                        jumpToMain();
                         try {
                             HttpUtils.getRequest(URL.loginCheck(URLEncoder.encode(username,"utf-8"), password), new HttpUtils.HttpListener() {
                                 @Override

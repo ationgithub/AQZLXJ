@@ -167,7 +167,7 @@ public class MaterialListActivity extends BaseActivity {
                 if (node.isLeaf()) {
                     mParametersData.cailiaoname = node.getName();
                     mParametersData.cailiaono = node.getId();
-                    BaseApplication.bus.post(mParametersData);
+//                    BaseApplication.bus.post(mParametersData);
                     Intent intent = new Intent();
                     intent.putExtra("cailiaoname", node.getName());
                     intent.putExtra("cailiaono", node.getId());

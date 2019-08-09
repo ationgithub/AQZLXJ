@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
-
 import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -20,7 +19,6 @@ import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.OverproofDetailActivity;
 import com.shtoone.aqxj.adapter.OnItemClickListener;
 import com.shtoone.aqxj.adapter.OverproofFragmentViewPagerFragmentRecyclerViewAdapter;
-import com.shtoone.aqxj.event.EventData;
 import com.shtoone.aqxj.bean.OverproofFragmentViewPagerFragmentListData;
 import com.shtoone.aqxj.bean.ParametersData;
 import com.shtoone.aqxj.fragment.base.BaseFragment;
@@ -29,7 +27,7 @@ import com.shtoone.aqxj.utils.ConstantsUtils;
 import com.shtoone.aqxj.utils.NetworkUtils;
 import com.shtoone.aqxj.utils.URL;
 import com.socks.library.KLog;
-import com.squareup.otto.Subscribe;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -81,7 +79,7 @@ public class OverproofFragmentViewPagerFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (!isRegistered) {
-            BaseApplication.bus.register(this);
+//            BaseApplication.bus.register(this);
             isRegistered = true;
         }
         View view = inflater.inflate(R.layout.recyclerview, container, false);
@@ -145,9 +143,9 @@ public class OverproofFragmentViewPagerFragment extends BaseFragment {
                 lastVisibleItemPosition = mLinearLayoutManager.findLastVisibleItemPosition();
 
                 if (dy > 5) {
-                    BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABHIDE));
+//                    BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABHIDE));
                 } else if (dy < -5) {
-                    BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
+//                    BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
                 }
             }
         });
@@ -360,54 +358,54 @@ public class OverproofFragmentViewPagerFragment extends BaseFragment {
         startActivity(intent);
     }
 
-    @Subscribe
-    public void updateSearch(ParametersData mParametersData) {
-        if (mParametersData != null) {
-            if (mParametersData.fromTo == ConstantsUtils.OVERPROOFFRAGMENT) {
-                //后期优化考虑的时候，看这里需不需要克隆，应该只要直接复制即可
-                this.mParametersData.startDateTime = mParametersData.startDateTime;
-                this.mParametersData.endDateTime = mParametersData.endDateTime;
-                this.mParametersData.equipmentID = mParametersData.equipmentID;
-                this.mParametersData.handleType = mParametersData.handleType;
-                KLog.e("mParametersData:" + mParametersData.startDateTime);
-                KLog.e("mParametersData:" + mParametersData.endDateTime);
-                KLog.e("mParametersData:" + mParametersData.equipmentID);
-                KLog.e("mParametersData:" + mParametersData.handleType);
-                mPtrFrameLayout.autoRefresh(true);
-            }
-        }
-    }
+//    @Subscribe
+//    public void updateSearch(ParametersData mParametersData) {
+//        if (mParametersData != null) {
+//            if (mParametersData.fromTo == ConstantsUtils.OVERPROOFFRAGMENT) {
+//                //后期优化考虑的时候，看这里需不需要克隆，应该只要直接复制即可
+//                this.mParametersData.startDateTime = mParametersData.startDateTime;
+//                this.mParametersData.endDateTime = mParametersData.endDateTime;
+//                this.mParametersData.equipmentID = mParametersData.equipmentID;
+//                this.mParametersData.handleType = mParametersData.handleType;
+//                KLog.e("mParametersData:" + mParametersData.startDateTime);
+//                KLog.e("mParametersData:" + mParametersData.endDateTime);
+//                KLog.e("mParametersData:" + mParametersData.equipmentID);
+//                KLog.e("mParametersData:" + mParametersData.handleType);
+//                mPtrFrameLayout.autoRefresh(true);
+//            }
+//        }
+//    }
 
-    @Subscribe
-    public void go2TopOrRefresh(EventData event) {
-        if (event.position == 1) {
-            mRecyclerView.smoothScrollToPosition(0);
-        }
-    }
+//    @Subscribe
+//    public void go2TopOrRefresh(EventData event) {
+//        if (event.position == 1) {
+//            mRecyclerView.smoothScrollToPosition(0);
+//        }
+//    }
 
-    @Subscribe
-    public void handleRefresh(EventData event) {
-        if (event.position == ConstantsUtils.REFRESH) {
-            mPtrFrameLayout.autoRefresh(true);
-        }
-    }
+//    @Subscribe
+//    public void handleRefresh(EventData event) {
+//        if (event.position == ConstantsUtils.REFRESH) {
+//            mPtrFrameLayout.autoRefresh(true);
+//        }
+//    }
 
     @Override
     public void onResume() {
         super.onResume();
-        BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
+//        BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
+//        BaseApplication.bus.post(new EventData(ConstantsUtils.OVERPROOFFABSHOW));
     }
 
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApplication.bus.unregister(this);
+//        BaseApplication.bus.unregister(this);
     }
 }

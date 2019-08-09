@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+    <!-- 备注 -->
+    <TextView
+        android:id="@+id/tv_remark_item_recyclerview_storage_detal_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <!-- 修正值 -->
+    <TextView
+        android:id="@+id/tv_xiuzhengzhi_item_recyclerview_storage_detal_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <!-- 修正人 -->
+    <TextView
+        android:id="@+id/tv_xiuzhnegren_item_recyclerview_storage_detal_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <!-- 操作时间 -->
+    <TextView
+        android:id="@+id/tv_time_item_recyclerview_storage_detal_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+
+</LinearLayout>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_grey_50"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <in.srain.cube.views.ptr.PtrFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/ptr_produce_query_detail_activity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/lightest_gray"
+                                                cube_ptr:ptr_duration_to_close="200"
+                                                cube_ptr:ptr_duration_to_close_header="1000"
+                                                cube_ptr:ptr_keep_header_when_refresh="true"
+                                                cube_ptr:ptr_pull_to_fresh="false"
+                                                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                                                cube_ptr:ptr_resistance="1.7">
+
+            <com.shtoone.aqxj.ui.PageStateLayout
+                android:id="@+id/psl_produce_query_detail_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyView="@layout/page_state_empty_view"
+                app:errorView="@layout/page_state_error_view"
+                app:loadingView="@layout/page_state_loading_view"
+                app:netErrorView="@layout/page_state_net_error_view">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nsv_produce_query_detail_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <!--详情数据部分-->
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cv_produce_query_detail_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_title_storage_detail_activity"
+                                    style="@style/DetailTextTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="基础信息" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_depart_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_title_storage_detail_activity"
+                                    android:text="所属机构：" />
+
+                                <TextView
+                                    android:id="@+id/tv0_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_depart_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_depart_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_material_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_depart_storage_activity"
+                                    android:text="材料名称：" />
+
+                                <TextView
+                                    android:id="@+id/tv1_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_material_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_material_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_jinliang_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_material_storage_activity"
+                                    android:text="材料进量(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv2_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_jinliang_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_jinliang_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_lilun_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_jinliang_storage_activity"
+                                    android:text="理论出量(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv3_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_lilun_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_lilun_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_shiji_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_lilun_storage_activity"
+                                    android:text="实际出量(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv4_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_shiji_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_shiji_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_kucun_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_shiji_storage_activity"
+                                    android:text="库    存(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv5_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_kucun_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_kucun_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_xiuzhengliang_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_kucun_storage_activity"
+                                    android:text="修正量(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv6_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_xiuzhengliang_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_xiuzhengliang_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_chushiliang_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_xiuzhengliang_storage_activity"
+                                    android:text="初始量(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv7_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_chushiliang_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_chushiliang_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_baojing_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_chushiliang_storage_activity"
+                                    android:text="是否报警：" />
+
+                                <TextView
+                                    android:id="@+id/tv8_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_baojing_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_baojing_storage_activity" />
+
+                                <TextView
+                                    android:id="@+id/tv_jingjiezhi_storage_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_baojing_storage_activity"
+                                    android:text="警戒值(吨)：" />
+
+                                <TextView
+                                    android:id="@+id/tv9_storage_detail_activity"
+                                    style="@style/YalijiDetailTextTheme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/tv_jingjiezhi_storage_activity"
+                                    android:layout_toRightOf="@+id/tv_jingjiezhi_storage_activity" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <!--表部分-->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="40dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+                                <TextView
+                                    style="@style/DetailTextTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="修正记录" />
+
+                                <!-- 表头部分 -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="备注" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="修正值" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="修正人" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="操作人" />
+
+                                </LinearLayout>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rv_storage_query_detail_activity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </com.shtoone.aqxj.ui.PageStateLayout>
+        </in.srain.cube.views.ptr.PtrFrameLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

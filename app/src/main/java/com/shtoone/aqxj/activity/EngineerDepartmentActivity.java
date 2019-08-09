@@ -9,14 +9,9 @@ import android.widget.FrameLayout;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
-import com.shtoone.aqxj.BaseApplication;
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.event.EventData;
-import com.shtoone.aqxj.fragment.engineeringactivity.JobOrderFragment;
-import com.shtoone.aqxj.fragment.engineeringactivity.MaterialConsumeFragment;
-import com.shtoone.aqxj.fragment.engineeringactivity.TaskListImpQueryFragment;
-import com.shtoone.aqxj.fragment.mainactivity.YCLWeightHouseQuertFragment;
+import com.shtoone.aqxj.fragment.mainactivity.ConcreteFragment;
 
 import java.util.ArrayList;
 
@@ -36,17 +31,17 @@ public class EngineerDepartmentActivity extends BaseActivity {
         setContentView(R.layout.activity_enginer);
 
         if (savedInstanceState == null) {
-            mFragments[0] = YCLWeightHouseQuertFragment.newInstance();
-            mFragments[1] = MaterialConsumeFragment.newInstance();
-            mFragments[2] = TaskListImpQueryFragment.newInstance();
-            mFragments[3] = JobOrderFragment.newInstance();
+            mFragments[0] = ConcreteFragment.newInstance();
+            mFragments[1] = ConcreteFragment.newInstance();
+            mFragments[2] = ConcreteFragment.newInstance();
+            mFragments[3] = ConcreteFragment.newInstance();
             int showPosition = 0;
             loadMultipleRootFragment(R.id.fl_container_concrete_activity, showPosition, mFragments[0], mFragments[1], mFragments[2],mFragments[3]);
         } else {
-            mFragments[0] = findFragment(YCLWeightHouseQuertFragment.class);
-            mFragments[1] = findFragment(MaterialConsumeFragment.class);
-            mFragments[2] = findFragment(TaskListImpQueryFragment.class);
-            mFragments[3] = findFragment(JobOrderFragment.class);
+            mFragments[0] = findFragment(ConcreteFragment.class);
+            mFragments[1] = findFragment(ConcreteFragment.class);
+            mFragments[2] = findFragment(ConcreteFragment.class);
+            mFragments[3] = findFragment(ConcreteFragment.class);
         }
 
         initView();
@@ -78,7 +73,7 @@ public class EngineerDepartmentActivity extends BaseActivity {
                 showHideFragment(mFragments[position], mFragments[bottomNavigationPreposition]);
                 bottomNavigationPreposition = position;
                 if (wasSelected) {
-                    BaseApplication.bus.post(new EventData(position));
+//                    BaseApplication.bus.post(new EventData(position));
                 }
 
                 fl_container.post(new Runnable() {

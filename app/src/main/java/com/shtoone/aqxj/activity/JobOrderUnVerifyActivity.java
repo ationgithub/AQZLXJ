@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.fragment.engineeringactivity.JobOrderUnVerifyFragment;
 
 /**
  * Created by Administrator on 2017/10/8.
@@ -24,8 +23,8 @@ public class JobOrderUnVerifyActivity extends BaseActivity {
         FrameLayout container = (FrameLayout) findViewById(R.id.root_layout_joborderunsubmit);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        JobOrderUnVerifyFragment jobOrderUnSubmitFragment =  JobOrderUnVerifyFragment.newInstance();
-        transaction.add(R.id.root_layout_joborderunsubmit, jobOrderUnSubmitFragment);
+//        JobOrderUnVerifyFragment jobOrderUnSubmitFragment =  JobOrderUnVerifyFragment.newInstance();
+//        transaction.add(R.id.root_layout_joborderunsubmit, jobOrderUnSubmitFragment);
         transaction.commit();
     }
 

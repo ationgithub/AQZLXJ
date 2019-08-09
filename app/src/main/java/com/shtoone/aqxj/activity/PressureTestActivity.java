@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.fragment.laboratoryactivity.YaLiJiFragment;
+//import com.shtoone.aqxj.fragment.laboratoryactivity.YaLiJiFragment;
 
 /**
  * Created by liangfeng on 2017/9/30.
@@ -22,8 +22,8 @@ public class PressureTestActivity extends BaseActivity {
         FrameLayout container = (FrameLayout) findViewById(R.id.root_layout_pressure_test);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        YaLiJiFragment yaLiJiFragment =  YaLiJiFragment.newInstance();
-        transaction.add(R.id.root_layout_pressure_test, yaLiJiFragment);
+//        YaLiJiFragment yaLiJiFragment =  YaLiJiFragment.newInstance();
+//        transaction.add(R.id.root_layout_pressure_test, yaLiJiFragment);
         transaction.commit();
     }
 

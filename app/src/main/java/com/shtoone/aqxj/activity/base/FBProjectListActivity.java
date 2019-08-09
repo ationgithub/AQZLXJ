@@ -69,7 +69,8 @@ public class FBProjectListActivity extends BaseActivity {
                 public void onClick(Node node, int position) {
                     Log.e(TAG,"posion:"+position);
                     mParametersData.projectno = node.getId();
-                    BaseApplication.bus.post(mParametersData);
+
+//                    BaseApplication.bus.post(mParametersData);
                 }
             });
             return false;

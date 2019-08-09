@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_laboratory_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar" />
+
+        <ImageView
+            android:src="@drawable/shiyanshi_top"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/cl_laboratory_item1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:src="@drawable/yali" />-->
+
+            <!--<TextView-->
+                <!--android:text="压力试验"-->
+                <!--style="@style/laboratory_text" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<ImageView-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                   <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:src="@drawable/arrows"-->
+                    <!--android:layout_height="25dp" />-->
+            <!--</RelativeLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_marginLeft="22dp"
+            android:background="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:id="@+id/cl_laboratory_item4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ratio" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:text="理论配合比"
+                style="@style/laboratory_text" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrows"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="22dp"
+            android:background="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:id="@+id/cl_laboratory_item2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/wanneng" />
+            <TextView
+                android:text="取样试验"
+                style="@style/laboratory_text" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrows"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="22dp"
+            android:background="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:id="@+id/cl_laboratory_item3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/tongzhidan" />
+
+            <TextView
+                android:text="配比通知单"
+                style="@style/laboratory_text"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrows"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="22dp"
+            android:background="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/cl_laboratory_item5"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/tongji" />
+            <TextView
+                android:id="@+id/tv_peibitongzhidanshenhe"
+                android:text="配比通知单审核"
+                style="@style/laboratory_text"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="25dp"
+                    android:src="@drawable/arrows"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="22dp"
+            android:background="#757575"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <!--<include layout="@layout/recyclerview" />-->
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

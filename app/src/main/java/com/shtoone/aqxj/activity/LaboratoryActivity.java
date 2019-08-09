@@ -5,7 +5,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewAnimationUtils;
-import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.FrameLayout;
 
@@ -14,15 +13,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.shtoone.aqxj.BaseApplication;
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.common.Dialoghelper;
-import com.shtoone.aqxj.event.EventData;
-import com.shtoone.aqxj.fragment.laboratoryactivity.LaboratoryStatisticFragment;
-import com.shtoone.aqxj.fragment.laboratoryactivity.PeiliaoTongzhidanFragment;
-import com.shtoone.aqxj.fragment.laboratoryactivity.WannengjiFragment;
-import com.shtoone.aqxj.fragment.laboratoryactivity.YaLiJiFragment;
-import com.shtoone.aqxj.utils.ConstantsUtils;
+import com.shtoone.aqxj.fragment.mainactivity.ConcreteFragment;
 import com.socks.library.KLog;
-import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 
@@ -44,17 +36,17 @@ public class LaboratoryActivity extends BaseActivity {
         itemFromSG = getIntent().getStringExtra("SG");
 
         if (savedInstanceState == null) {
-            mFragments[0] = YaLiJiFragment.newInstance();
-            mFragments[1] = WannengjiFragment.newInstance();
-            mFragments[2] = LaboratoryStatisticFragment.newInstance();
-            mFragments[3] = PeiliaoTongzhidanFragment.newInstance();
+            mFragments[0] = ConcreteFragment.newInstance();
+            mFragments[1] = ConcreteFragment.newInstance();
+            mFragments[2] = ConcreteFragment.newInstance();
+            mFragments[3] = ConcreteFragment.newInstance();
             int showPosition = 0;
             loadMultipleRootFragment(R.id.fl_container_laboratory_activity, showPosition, mFragments[0], mFragments[1], mFragments[2],mFragments[3]);
         } else {
-            mFragments[0] = findFragment(YaLiJiFragment.class);
-            mFragments[1] = findFragment(WannengjiFragment.class);
-            mFragments[2] = findFragment(LaboratoryStatisticFragment.class);
-            mFragments[3] = findFragment(PeiliaoTongzhidanFragment.class);
+            mFragments[0] = findFragment(ConcreteFragment.class);
+            mFragments[1] =findFragment(ConcreteFragment.class);
+            mFragments[2] = findFragment(ConcreteFragment.class);
+            mFragments[3] = findFragment(ConcreteFragment.class);
         }
 
         initView();
@@ -92,7 +84,8 @@ public class LaboratoryActivity extends BaseActivity {
                 showHideFragment(mFragments[position], mFragments[bottomNavigationPreposition]);
                 bottomNavigationPreposition = position;
                 if (wasSelected) {
-                    BaseApplication.bus.post(new EventData(position));
+
+//                    BaseApplication.bus.post(new EventData(position));
                     KLog.e("position:" + position);
                 }
 
@@ -134,11 +127,11 @@ public class LaboratoryActivity extends BaseActivity {
         bottomNavigation.setCurrentItem(currentItem);
     }
 
-    @Subscribe
-    public void updateSearch(EventData mEventData) {
-        if (mEventData.position == ConstantsUtils.NOTIFY_REFRESH) {
-            ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content).getRootView();
-            Dialoghelper.successSnackbar(viewGroup, "恭喜，保存成功", Dialoghelper.APPEAR_FROM_TOP_TO_DOWN);
-        }
-    }
+//    @Subscribe
+//    public void updateSearch(EventData mEventData) {
+//        if (mEventData.position == ConstantsUtils.NOTIFY_REFRESH) {
+//            ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content).getRootView();
+//            Dialoghelper.successSnackbar(viewGroup, "恭喜，保存成功", Dialoghelper.APPEAR_FROM_TOP_TO_DOWN);
+//        }
+//    }
 }

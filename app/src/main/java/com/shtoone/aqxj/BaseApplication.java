@@ -12,7 +12,6 @@ import com.shtoone.aqxj.bean.ParametersData;
 import com.shtoone.aqxj.bean.UserInfoData;
 import com.shtoone.aqxj.getui.GetuiSdkDemoActivity;
 import com.socks.library.KLog;
-import com.squareup.otto.Bus;
 
 import org.litepal.LitePalApplication;
 
@@ -23,7 +22,7 @@ public class BaseApplication extends LitePalApplication {
     private static final String TAG = BaseApplication.class.getSimpleName();
     public static BaseApplication application;
     public static Context context;
-    public static final Bus bus = new Bus();
+//    public static final Bus bus = new Bus();
     public static ParametersData parametersData = new ParametersData();
     public static RequestQueue mRequestQueue;
     public static UserInfoData mUserInfoData;

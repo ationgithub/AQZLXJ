@@ -574,7 +574,7 @@ public class OverproofDetailActivity extends BaseActivity implements TimePickerD
                 if (msg.what == 1) {
                     progressDialog.dismiss();
                     TastyToast.makeText(getApplicationContext(), "上传成功!", TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
-                    BaseApplication.bus.post(new EventData(ConstantsUtils.REFRESH));
+//                    BaseApplication.bus.post(new EventData(ConstantsUtils.REFRESH));
                     finish();
                 } else {
                     progressDialog.dismiss();
@@ -624,7 +624,7 @@ public class OverproofDetailActivity extends BaseActivity implements TimePickerD
 
                     if (jsonObject.optBoolean("success")) {
 
-                        BaseApplication.bus.post(new EventData(ConstantsUtils.REFRESH));
+//                        BaseApplication.bus.post(new EventData(ConstantsUtils.REFRESH));
                         TastyToast.makeText(getApplicationContext(), "上传成功!", TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
                         finish();
                     } else {
@@ -782,7 +782,7 @@ public class OverproofDetailActivity extends BaseActivity implements TimePickerD
     private void setToolbarTitle() {
         if (null != mToolbar && null != BaseApplication.mDepartmentData && !TextUtils.isEmpty(BaseApplication.mDepartmentData.departmentName)) {
             StringBuffer sb = new StringBuffer(BaseApplication.mDepartmentData.departmentName + " > ");
-            sb.append(getString(R.string.banhezhan) + " > ");
+            sb.append(getString(R.string.organization) + " > ");
             sb.append(getString(R.string.overproof) + " > ");
             sb.append(getString(R.string.detail)).trimToSize();
             mToolbar.setTitle(sb.toString());

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/cv_item_recyclerview_report_tasklist_detail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    app:cardCornerRadius="@dimen/card_Corner_Radius"
+                                    app:cardElevation="3dp"
+                                    app:cardPreventCornerOverlap="false"
+                                    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tv0"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原任务单编号：" />
+
+        <TextView
+            android:id="@+id/tv0_item_recyclerview_report_tasklist_detail"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv0"
+            android:layout_toRightOf="@+id/tv0" />
+
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv0"
+            android:text="任务单编号：" />
+
+        <TextView
+            android:id="@+id/tv1_item_recyclerview_report_tasklist_detail"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv1"
+            android:layout_toRightOf="@+id/tv1" />
+
+        <TextView
+        android:id="@+id/tv2"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:text="方量：" />
+
+        <TextView
+        android:id="@+id/tv2_item_recyclerview_report_tasklist_detail"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv2"
+        android:layout_toRightOf="@+id/tv2" />
+
+        <TextView
+        android:id="@+id/tv3"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:text="操作时间：" />
+
+        <TextView
+        android:id="@+id/tv3_item_recyclerview_report_tasklist_detail"
+        style="@style/RecyclerViewItemTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv3"
+        android:layout_toRightOf="@+id/tv3" />
+
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv3"
+            android:text="操作者：" />
+
+        <TextView
+            android:id="@+id/tv4_item_recyclerview_report_tasklist_detail"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv4"
+            android:layout_toRightOf="@+id/tv4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv4"
+            android:text="类型：" />
+
+        <TextView
+            android:id="@+id/tv5_item_recyclerview_report_tasklist_detail"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv5"
+            android:layout_toRightOf="@+id/tv5" />
+
+        <TextView
+            android:id="@+id/tv6"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv5"
+            android:text="转入类型：" />
+
+        <TextView
+            android:id="@+id/tv6_item_recyclerview_report_tasklist_detail"
+            style="@style/RecyclerViewItemTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv6"
+            android:layout_toRightOf="@+id/tv6" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

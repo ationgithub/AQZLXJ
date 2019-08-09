@@ -954,7 +954,8 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 String endTime = DateUtils.ChangeTimeToLong(end_date_time.getEditText().getText().toString());
                 mParametersData.keyword = ed_jzbw.getText().toString().trim();
                 if (Integer.valueOf(startTime) <= Integer.valueOf(endTime)) {
-                    BaseApplication.bus.post(mParametersData);
+
+//                    BaseApplication.bus.post(mParametersData);
                     onBackPressed();
                 } else {
                     end_date_time.setError("结束时间不能小于开始时间");

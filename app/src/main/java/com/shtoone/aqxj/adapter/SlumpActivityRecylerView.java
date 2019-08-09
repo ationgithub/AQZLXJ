@@ -18,13 +18,14 @@ import java.util.List;
  */
 public class SlumpActivityRecylerView extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private static final String TAG = PourPositionActivityRecylerView.class.getSimpleName();
+    private static final String TAG = SlumpActivityRecylerView.class.getSimpleName();
     private Context context;
     private List<SlumpData.DataBean> listData;
     private Resources mResources;
     private OnItemClickListener mOnItemClickListener;
 
     public SlumpActivityRecylerView(Context context, List<SlumpData.DataBean> listData) {
+
         super();
         this.context = context;
         this.listData = listData;

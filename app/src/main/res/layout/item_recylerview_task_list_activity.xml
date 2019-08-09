@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_renwuno_item_recyclerview_task_list_acticity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_person_item_recyclerview_task_list_acticity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_time_item_recyclerview_task_list_acticity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_way_item_recyclerview_task_list_acticity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:textSize="14sp"/>
+
+
+
+</LinearLayout>

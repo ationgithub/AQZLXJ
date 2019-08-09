@@ -111,7 +111,7 @@ public class LaboratoryMainActivity extends BaseActivity implements NavigationVi
 
         if (null != mToolbar && null != BaseApplication.mUserInfoData && !TextUtils.isEmpty(BaseApplication.mUserInfoData.getDepartName())) {
             StringBuffer sb = new StringBuffer(BaseApplication.mUserInfoData.getDepartName() + " > ");
-            sb.append(getString(R.string.laboratory)).trimToSize();
+            sb.append(getString(R.string.organization)).trimToSize();
             mToolbar.setTitle(sb.toString());
         }
 

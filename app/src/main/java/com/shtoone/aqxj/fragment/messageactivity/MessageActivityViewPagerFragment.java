@@ -79,7 +79,7 @@ public class MessageActivityViewPagerFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (!isRegistered) {
-            BaseApplication.bus.register(this);
+//            BaseApplication.bus.register(this);
             isRegistered = true;
         }
         View view = inflater.inflate(R.layout.recyclerview, container, false);

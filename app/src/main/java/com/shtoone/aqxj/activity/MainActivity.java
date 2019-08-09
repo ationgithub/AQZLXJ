@@ -25,11 +25,8 @@ import com.pgyersdk.update.PgyUpdateManager;
 import com.shtoone.aqxj.BaseApplication;
 import com.shtoone.aqxj.R;
 import com.shtoone.aqxj.activity.base.BaseActivity;
-import com.shtoone.aqxj.fragment.EngineeringDepartment.EngineeringDepartmentFragment;
 import com.shtoone.aqxj.fragment.mainactivity.ConcreteFragment;
-import com.shtoone.aqxj.fragment.mainactivity.LaboratoryFragment;
-import com.shtoone.aqxj.fragment.mainactivity.StorageFragment;
-import com.shtoone.aqxj.fragment.mainactivity.WeightHouseFragment;
+import com.shtoone.aqxj.fragment.mainactivity.EngineeringDepartmentFragment;
 import com.shtoone.aqxj.utils.ConstantsUtils;
 import com.shtoone.aqxj.utils.SharedPreferencesUtils;
 import java.util.ArrayList;
@@ -66,23 +63,24 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         if (savedInstanceState == null) {
 //            mFragments[0] = ConcreteFragment.newInstance();
-            mFragments[0] = LaboratoryFragment.newInstance();
+            mFragments[0] = ConcreteFragment.newInstance();
             mFragments[1] = ConcreteFragment.newInstance();
 //            mFragments[1] = LaboratoryFragment.newInstance();
-            mFragments[2] = WeightHouseFragment.newInstance();
+            mFragments[2] = ConcreteFragment.newInstance();
             mFragments[3] = EngineeringDepartmentFragment.newInstance();
-            mFragments[4] = StorageFragment.newInstance();
-            loadMultipleRootFragment(R.id.fl_container_main_activity, 0, mFragments[0], mFragments[1],mFragments[2],mFragments[3],mFragments[4]);
+
+            loadMultipleRootFragment(R.id.fl_container_main_activity, 0, mFragments[0], mFragments[1],mFragments[2],mFragments[3]);
         } else {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             // 这里我们需要拿到mFragments的引用,也可以通过getSupportFragmentManager.getFragments()自行进行判断查找(效率更高些),用下面的方法查找更方便些
 //            mFragments[0] = findFragment(ConcreteFragment.class);
-            mFragments[0] = findFragment(LaboratoryFragment.class);
+            mFragments[0] = findFragment(ConcreteFragment.class);
             mFragments[1] = findFragment(ConcreteFragment.class);
+
 //            mFragments[1] = findFragment(LaboratoryFragment.class);
-            mFragments[2] = findFragment(WeightHouseFragment.class);
+            mFragments[2] = findFragment(ConcreteFragment.class);
             mFragments[3] = findFragment(EngineeringDepartmentFragment.class);
-            mFragments[4] = findFragment(StorageFragment.class);
+
         }
         initView();
         initData();
@@ -130,8 +128,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
         }
         /***********************************************/
-        int [] bottomTitles = {R.string.laboratory,R.string.concrete,R.string.weight_house,R.string.engineering_department,R.string.storage};
-        int [] bottomIcons = {R.drawable.ic_lab,R.drawable.ic_bhz,R.drawable.gbc, R.drawable.gcb,R.drawable.ck,R.color.white};
+        int [] bottomTitles = {R.string.message,R.string.workbench,R.string.orgniser,R.string.personal_message,};
+        int [] bottomIcons = {R.drawable.ic_lab,R.drawable.ic_bhz,R.drawable.gbc, R.drawable.gcb,R.color.white};
         int [] bottomBackgroundColors = { R.color.white,R.color.material_yellow_100,R.color.white, R.color.material_yellow_100, R.color.white};
         for (int i = 0; bottomTitles.length>i;i++){
             bottomNavigationItems.add(new AHBottomNavigationItem(bottomTitles[i],bottomIcons[i],bottomBackgroundColors[i]));

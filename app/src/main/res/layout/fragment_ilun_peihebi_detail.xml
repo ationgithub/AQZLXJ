@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_grey_50"
+        android:orientation="vertical">
+
+
+        <in.srain.cube.views.ptr.PtrFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptr_lilun_peihebi_detail_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightest_gray"
+            cube_ptr:ptr_duration_to_close="200"
+            cube_ptr:ptr_duration_to_close_header="1000"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <com.shtoone.aqxj.ui.PageStateLayout
+                android:id="@+id/psl_lilun_peihebi_detail_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyView="@layout/page_state_empty_view"
+                app:errorView="@layout/page_state_error_view"
+                app:loadingView="@layout/page_state_loading_view"
+                app:netErrorView="@layout/page_state_net_error_view">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nsv_lilun_peihebi_detail_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="基础信息"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                .
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="0.5dp">
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="设计配合比编号：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_bianhao_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="组织机构：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_depart_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="设计强度：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_sjqd_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="塌落度：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_taluodu_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="抗渗等级：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_kangshen_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingRight="5dp"
+                                            android:text="抗折度：" />
+
+                                        <TextView
+                                            android:id="@+id/tv_kangzhedu_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+                                </TableLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="原材设置"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="0.5dp">
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="材料" />
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="材料名称" />
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="配比值(kg(默认1方)" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="水泥" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv1_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv1_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="粉煤灰" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv2_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv2_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="细骨料" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv3_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv3_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="粗骨料(大)" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv4_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv4_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="粗骨料(中)" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv5_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv5_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="粗骨料(小)" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv6_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv6_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="矿粉" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv7_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv7_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="减水剂" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv8_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv8_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.2"
+                                            android:gravity="center"
+                                            android:text="引气剂" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv9_material_yinqiji_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="center" />
+
+                                        <TextView
+                                            android:id="@+id/tv9_peibi_yinqiji_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="center" />
+
+
+                                    </TableRow>
+
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.2"
+                                            android:gravity="center"
+                                            android:text="膨胀剂" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv9_material_pengzhang_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="center" />
+
+                                        <TextView
+                                            android:id="@+id/tv9_peibi_pengzhang_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="center" />
+
+
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1"
+                                            android:gravity="left|center_vertical"
+                                            android:text="水" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv9_material_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+
+                                        <TextView
+                                            android:id="@+id/tv9_peibi_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical" />
+                                    </TableRow>
+
+                                </TableLayout>
+                            </LinearLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            card_view:cardCornerRadius="@dimen/card_Corner_Radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="8dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="#2fa881" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:text="掺量信息"
+                                        android:textColor="@color/material_green_400"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:padding="0.5dp">
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="细石掺量：" />
+
+                                        <TextView
+                                            android:id="@+id/tv1_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="JG-3掺量：" />
+
+                                        <TextView
+                                            android:id="@+id/tv2_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="聚羧酸掺量：" />
+
+                                        <TextView
+                                            android:id="@+id/tv3_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="河砂掺量：" />
+
+                                        <TextView
+                                            android:id="@+id/tv4_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="表观密度：" />
+
+                                        <TextView
+                                            android:id="@+id/tv5_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="砂率：" />
+
+                                        <TextView
+                                            android:id="@+id/tv6_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="水胶比：" />
+
+                                        <TextView
+                                            android:id="@+id/tv7_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="容量：" />
+
+                                        <TextView
+                                            android:id="@+id/tv8_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="1.5"
+                                            android:gravity="left|center_vertical"
+                                            android:text="备注：" />
+
+                                        <TextView
+                                            android:id="@+id/tv9_chanliang_lilun_detail"
+                                            style="@style/peibitongzhidanDetail"
+                                            android:layout_weight="2.5"
+                                            android:gravity="left|center_vertical"
+                                            android:paddingLeft="5dp" />
+                                    </TableRow>
+
+                                </TableLayout>
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </com.shtoone.aqxj.ui.PageStateLayout>
+        </in.srain.cube.views.ptr.PtrFrameLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -37,7 +37,7 @@ import static com.shtoone.aqxj.BaseApplication.mDepartmentData;
  */
 public class SlumpActivity extends BaseActivity{
 
-    private static final String TAG = PourPositionActivity.class.getSimpleName();
+    private static final String TAG = SlumpActivity.class.getSimpleName();
     private Toolbar mToolbar;
     private PtrFrameLayout mPtrFrameLayout;
     private RecyclerView mRecyclerView;
@@ -168,7 +168,7 @@ public class SlumpActivity extends BaseActivity{
 
     private void setToolbarTitle() {
         if (null != mToolbar && null != mDepartmentData && !TextUtils.isEmpty(mDepartmentData.departmentName)) {
-            StringBuffer sb = new StringBuffer(getString(R.string.engineering_department)+ " > ");
+            StringBuffer sb = new StringBuffer(getString(R.string.organization)+ " > ");
             sb.append("坍落度");
             mToolbar.setTitle(sb.toString());
         }
